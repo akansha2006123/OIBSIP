@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+    --navy: #14213d;
+    --blue: #1d3557;
+    --teal: #2a9d8f;
+    --gold: #e9c46a;
+    --text: #293241;
+    --muted: #65727e;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--text);
+    background: linear-gradient(135deg, #fff7ed, #e8f8f5);
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.8;
+}
+
+header {
+    position: relative;
+    overflow: hidden;
+    padding: 90px 20px;
+    text-align: center;
+    color: var(--white);
+    background: linear-gradient(135deg, #14213d, #247ba0, #2a9d8f);
+}
+
+header::before {
+    width: 260px;
+    height: 260px;
+    top: -150px;
+    left: -80px;
+}
+
+header::after {
+    width: 220px;
+    height: 220px;
+    right: -80px;
+    bottom: -140px;
+    position: absolute;
+    content: '';
+    border: 25px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+}
+
+header h1,
+h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+header h1 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 12px;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    letter-spacing: 1px;
+}
+
+header p {
+    position: relative;
+    z-index: 1;
+    color: #fff1b8;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+main {
+    width: min(1100px, 92%);
+    margin: 45px auto;
+}
+
+section {
+    margin-top: 30px;
+    padding: 32px;
+    border: 1px solid rgba(20, 33, 61, 0.08);
+    border-left: 7px solid var(--teal);
+    border-radius: 20px;
+    box-shadow: 0 12px 28px rgba(20, 33, 61, 0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(20, 33, 61, 0.16);
+}
+main section:nth-child(1) {
+    background: linear-gradient(135deg, #ffffff, #eef8ff);
+    border-left-color: #457b9d;
+}
+
+main section:nth-child(2) {
+    background: linear-gradient(135deg, #fffaf0, #fff0d5);
+    border-left-color: #e9a23b;
+}
+
+main section:nth-child(3) {
+    background: linear-gradient(135deg, #effcf8, #dff5ef);
+    border-left-color: #2a9d8f;
+}
+
+main section:nth-child(4) {
+    background: linear-gradient(135deg, #f4f0ff, #e9e0ff);
+    border-left-color: #8064a2;
+}
+
+main section:nth-child(5) {
+    background: linear-gradient(135deg, #fff1f3, #ffe1e7);
+    border-left-color: #d1495b;
+}
+
+main section:nth-child(6) {
+    background: linear-gradient(135deg, #eef5ff, #dceaff);
+    border-left-color: #3a86ff;
+}
+
+main section:nth-child(7) {
+    background: linear-gradient(135deg, #fffdf2, #fff2b8);
+    border-left-color: #e9c46a;
+}
+
+main section:nth-child(8) {
+    background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+    border-left-color: #52b788;
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 38px;
+    align-items: center;
+    margin-top: 0;
+}
+
+figure {
+    text-align: center;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+    border: 7px solid var(--white);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(20, 33, 61, 0.25);
+}
+
+figcaption {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+h2 {
+    margin-bottom: 16px;
+    color: var(--blue);
+    font-size: 1.9rem;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+strong {
+    color: var(--blue);
+}
+
+em {
+    color: #a15c00;
+}
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.quote {
+    text-align: center;
+    background: linear-gradient(135deg, #f6bebe, #ff9697) !important;
+    border-left-color: #f4c95d !important;
+    color: #f8f9fa;
+}
+
+.quote h2 {
+    color: #bf3a3a;
+}
+
+.quote blockquote {
+    max-width: 760px;
+    margin: 12px auto 8px;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.25rem, 3vw, 1.7rem);
+    font-style: italic;
+    font-weight: 600;
+}
+
+.quote cite {
+    color: #d8dee9;
+    font-size: 0.95rem;
+}
+
+footer {
+    margin-top: 55px;
+    padding: 32px 20px;
+    text-align: center;
+    color: var(--white);
+    background: linear-gradient(135deg, #14213d, #1d3557);
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+footer a {
+    color: var(--gold);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    header {
+        padding: 65px 20px;
+    }
+
+    .intro {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    section {
+        padding: 24px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+}
