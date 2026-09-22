@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#070912">
+	<title>Daylist | Task list</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main class="app-shell list-page">
+		<header class="topbar">
+			<a class="brand" href="index.html" aria-label="Daylist dashboard">
+				<span class="brand-mark">D</span>
+				<span>daylist</span>
+			</a>
+			<div class="date-stamp" id="todayLabel"></div>
+			<button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode" title="Switch to light mode"><span aria-hidden="true">&#9789;</span></button>
+		</header>
+
+		<section class="intro" aria-labelledby="pageTitle">
+			<a class="back-link" href="index.html">&larr; Dashboard</a>
+			<p class="eyebrow">YOUR WORKSPACE</p>
+			<h1 id="pageTitle">Task list</h1>
+		</section>
+
+		<section class="lists" aria-label="Tasks">
+			<div class="list-column">
+				<div class="section-heading">
+					<div class="heading-name"><span class="status-dot pending-dot"></span><h2>Pending</h2></div>
+					<span class="count" id="pendingCount">0 remaining</span>
+					<span class="section-note">TO DO</span>
+				</div>
+				<div class="task-list" id="pendingList"></div>
+				<div class="empty-state" id="pendingEmpty"><span class="empty-icon">~</span><p>Nothing waiting here.</p><small>Add a task from the dashboard.</small></div>
+			</div>
+
+			<div class="list-column completed-column">
+				<div class="section-heading">
+					<div class="heading-name"><span class="status-dot complete-dot"></span><h2>Completed</h2></div>
+					<span class="count" id="completedCount">0 done</span>
+					<button class="clear-button" id="clearCompleted" type="button">Clear all</button>
+				</div>
+				<div class="task-list" id="completedList"></div>
+				<div class="empty-state" id="completedEmpty"><span class="empty-icon">*</span><p>Your wins will land here.</p><small>Complete a task to see it here.</small></div>
+			</div>
+		</section>
+	</main>
+	<script src="script.js"></script>
+</body>
+</html>
